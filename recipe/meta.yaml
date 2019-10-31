@@ -15,7 +15,7 @@ build:
   entry_points:
     - helpdev=helpdev.__main__:main
   noarch: "python"
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
 
 requirements:
   host:
@@ -33,7 +33,6 @@ test:
     - helpdev
   commands:
     - helpdev --help
-    - pytest tests
 
 about:
   home: "https://gitlab.com/dpizetta/helpdev"
