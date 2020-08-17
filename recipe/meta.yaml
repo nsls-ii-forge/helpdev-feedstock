@@ -1,21 +1,21 @@
 {% set name = "helpdev" %}
-{% set version = "0.6.10" %}
-{% set sha256 = "9e61d24458b7506809670222ca656b139e67d46c530cd227a899780152d7b44e" %}
+{% set version = "0.7.1" %}
+{% set sha256 = "bb62a79acbac141dadf42cadeb92bb7450dd18b9824a62043b6a0b149190db3d" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
   entry_points:
     - helpdev=helpdev.__main__:main
-  noarch: "python"
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
+  noarch: python
+  script: '{{ PYTHON }} -m pip install . --no-deps -vv '
 
 requirements:
   host:
@@ -35,9 +35,9 @@ test:
     - helpdev --help
 
 about:
-  home: "https://gitlab.com/dpizetta/helpdev"
-  license: "MIT"
-  license_family: "MIT"
+  home: https://gitlab.com/dpizetta/helpdev
+  license: MIT
+  license_family: MIT
   license_file: LICENSE.rst
-  summary: "HelpDev - Extracts information about the Python environment easily."
+  summary: HelpDev - Extracts information about the Python environment easily.
 
