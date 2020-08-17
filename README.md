@@ -5,7 +5,7 @@ Home: https://gitlab.com/dpizetta/helpdev
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: HelpDev - Extracts information about the Python environment easily.
 
